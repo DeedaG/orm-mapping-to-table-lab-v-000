@@ -20,13 +20,6 @@ attr_reader :id
     DB[:conn].execute(sql)
   end
 
-  def self.save
-    sql = <<-SQL
-      INSERT INTO students (name, grade)
-      VALUES (?, ?)
-      SQL
-  end
-
   def self.drop_table
     sql = <<-SQL
     DROP TABLE students
