@@ -20,6 +20,9 @@ attr_reader :id
     DB[:conn].execute(sql)
   end
 
+  def self.save
+  end 
+
   def self.drop_table
     sql = <<-SQL
     DROP TABLE students
